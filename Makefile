@@ -26,8 +26,8 @@ MAGI     = magi/build/libmagi.a
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #     Targets
-# Produce cart CGI:
-magistyle: main.c $(MAGI)
+# Produce internationalization CGI:
+magilang: main.c $(MAGI)
 	$(COMPILE) $(CFLAGS) $(INCDIRS) $< $(LIBDIRS) $(LIBS) -o $@
 
 $(MAGI):
@@ -35,4 +35,4 @@ $(MAGI):
 
 .PHONY: clean
 clean:
-	rm -f magistyle
+	rm -f magilang
